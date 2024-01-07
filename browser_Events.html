@@ -21,4 +21,27 @@
 </html> -->
 
 <!-- task-2 Hide self-->
-<input type="button" onclick="this.hidden=true" value="Click to hide">
+<!-- <input type="button" onclick="this.hidden=true" value="Click to hide"> -->
+
+<!-- task3-Which handlers run? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<button id="button">Click me</button>
+
+<script>
+  var button = document.getElementById('button');
+    function handler() {
+  alert(1);
+}
+
+button.addEventListener("click", handler);
+button.removeEventListener("click", handler);
+  </script>
+</body>
+</html>
