@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,5 +19,94 @@
         </div>
       </form>
       
+</body>
+</html> -->
+
+<!-- event.target -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="button" onclick="sayThanks" value="Try">
+
+    <button onclick="countRabbits()" value="Rabbit count"> Submit</button>
+
+
+  <form id="form">FORM
+    <div>DIV
+      <p>P</p>
+    </div>
+  </form>
+    <style>
+        form {
+  background-color: green;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+div {
+  background-color: blue;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 100px;
+  height: 100px;
+}
+
+p {
+  background-color: red;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+}
+
+body {
+  line-height: 25px;
+  font-size: 16px;
+}
+    </style>
+    <script>
+form.onclick = function(event) {
+    event.target.style.backgroundColor = 'yellow';
+
+    setTimeout(()=>{
+        alert(`target = ${event.target.tagName},this=${this.tagName}`)
+        event.target.style.backgroundColor= '' 
+        }, 0);
+}
+// document.getElementById("button").onclick = () =>alert('Thanks')
+// function countRabbits() {
+//     // Get the container element
+//     let container = document.getElementById("container");
+
+//     // Clear previous content
+//     container.innerHTML = "";
+
+//     // Loop through and display rabbit numbers
+//     for (let i = 1; i <= 3; i++) {
+//       // Create a new paragraph element
+//       let paragraph = document.createElement("p");
+
+//       // Set the text content of the paragraph
+//       paragraph.textContent = "Rabbit number " + i;
+
+//       // Append the paragraph to the container
+//       container.appendChild(paragraph);
+//     }
+//   }
+
+
+    </script>
 </body>
 </html>
